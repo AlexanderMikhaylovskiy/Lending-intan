@@ -1,0 +1,976 @@
+@import 'fonts.scss';
+@import 'media';
+@import 'bootstrap.scss';
+@import '_bootstrap-skin.scss';
+@import '_hamburger.scss';
+@import 'animate.scss';
+html{
+	font-size: 8px;
+	min-width: 340px;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+	@include to992 {
+		font-size: 10px;
+	}
+}
+body {
+	margin: 0;
+	color: #000;
+	background: #fff;
+	font-family: 'Open Sans';
+	font-weight: normal;
+}
+header {
+	background-color: #3cb4e7;
+	position:relative;
+	margin-bottom:50px;
+	.mob {
+		overflow: hidden;
+		.hamburger {
+			float:right;
+			outline: none;
+		}
+		.phone {
+			float:left;
+		}
+	}
+	.nav-header {
+		margin: 0;
+		padding: 0;
+		li {
+			display:block;
+			vertical-align: top;
+			list-style-type: none;
+			padding:0;
+			&:last-child {
+				padding-right:0;
+			}
+			a {
+				color:#fff;
+				font-size: 1.5rem;
+				line-height: 50px;
+				white-space:nowrap;
+				display: block;
+				text-align: center;
+			}
+		}
+		@include to768 {
+			li {
+				padding: 0 1.75rem 0 0;
+				display: inline-block;
+			}
+		}
+		@include to992 {
+			li {
+				padding:0 3rem 0 0;
+				a {}
+			}
+		}
+	}
+	.callback,.phone {
+		color:#fff;
+		background-color: #3cb4e7;
+	}
+	.callback {
+		position:absolute;
+		bottom:-50px;
+		left:0;
+		right:0;
+		text-align: center;
+		background-color: #94c11f;
+		a {
+			line-height: 50px;
+			color:#fff;
+			white-space:nowrap;
+			font-size: 1.5rem;
+			display: block;
+		}
+	}
+	.phone {
+		span {
+			line-height: 50px;
+			white-space:nowrap;
+			font-size: 2rem;
+			text-transform: uppercase;
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+		}
+	}
+	@include to768 {
+		background-color: #94c11f;
+		margin-bottom:0;
+		.callback {
+			float:left;
+			position:static;
+			background-color: #3cb4e7;
+		}
+		.phone {
+			padding:0;
+		}
+	}
+}
+.main {
+	overflow: hidden;
+	.logo {
+		margin:5rem 0 4.5rem 0;
+		width: 170px;
+		display: inline-block;
+		a {
+			display: block;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.left {
+		text-align: center;
+	}
+	.title-main{
+		font-size: 4.2rem;
+		line-height: 5rem;
+		font-family: 'PF Din Text Cond Pro';
+		font-weight: normal;
+		text-transform: uppercase;
+		span {
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			color:#94c11f;
+		}
+	}
+	.address {
+		margin-top: 4rem;
+		text-transform: uppercase;
+		font-size: 2.6rem;
+		font-family: 'PF Din Text Cond Pro';
+		font-weight: normal;
+	}
+	.ClinicsMap {
+		height:52rem;
+		position: relative;
+		margin-left:50px;
+		>img{
+			width:148rem;
+			margin-top: -21.3rem;
+			margin-left: -13.9rem;
+			z-index: -200;
+			position: relative;
+		}
+		.city {
+			position:absolute;
+			bottom:-1rem;
+			left:3.5rem;
+			font-size: 1.6rem;
+			white-space:nowrap;
+		}
+		.pin {
+			display:none;
+			position:absolute;
+			bottom:5rem;
+			left:5rem;
+			white-space:nowrap;
+			background-color: #94c11f;
+			border-radius:3px;
+			padding:0 13px;
+			bottom: 2rem;
+			left: -2.9rem;
+			img {
+				width: 1.5rem;
+				display: inline;
+				margin: 0 1rem 1rem 0;
+			}
+			span {
+				line-height: 4rem;
+				text-transform: uppercase;
+				font-family: 'PF Din Text Cond Pro';
+				font-weight: 500;
+				font-size: 1.9rem;
+				color:#fff;
+			}
+		}
+		.location {
+			position:absolute;
+			&:hover {
+				.pin {
+					display: block;
+				}
+			}
+			>img{
+				width: 4rem;
+			}
+		}
+		.st-petersburg {
+			bottom: 38.2rem;
+			left:7.2rem;
+		}
+		.rostov {
+			bottom: 20.1rem;
+			left:4.2rem;
+		}
+		.novorossiysk {
+			bottom: 11.9rem;
+			left:1.9rem;
+		}
+		.krasnodar {
+			bottom: 6.1rem;
+			left:-3.5rem;
+		}
+		.moscow {
+			bottom: 26.9rem;
+			left:14rem;
+			.pin {
+				background-color:#3cb4e7;
+			}
+		}
+	}
+	@include to768 {
+		.left {
+			text-align: left;
+		}
+		.ClinicsMap {
+			margin-left:0;
+		}
+	}
+}
+.all-discounts {
+	background-color:#94c11f;
+	color:#fff;
+	font-family: 'PF Din Text Cond Pro';
+	font-weight: 500;
+	text-align: center;
+	p {
+		text-transform: uppercase;
+		font-size: 3.2rem;
+		padding:3rem 0;
+		margin: 0;
+	}
+	a {
+		margin: 2.3rem 0;
+		padding: 1.1rem 2.7rem;
+	}
+	@include to768 {
+		text-align: left;
+	}
+}
+.advantages {
+	padding-bottom: 4.6rem;
+	.title-advantages {
+		text-align: center;
+		p {
+			text-transform: uppercase;
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			font-size: 4.6rem;
+			margin: 4.6rem 0 7.2rem 0;
+		}
+	}
+	.circle {
+		display: inline-block;
+		border:2px solid #3cb4e7;
+		border-radius: 50%;
+		position: relative;
+		width: 13rem;
+		height: 13rem;
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		&:hover {
+			background-color: #3cb4e7;
+			.a {
+				fill:#fff;
+			}
+			.b {
+				stroke:#fff;
+			}
+			.c {
+				stroke:#fff;
+			}
+		}
+	}
+	.title-advantage {
+		color: #3cb4e7;
+		font-size:1.6rem;
+		font-weight: 600;
+	}
+	.text-advantage {
+		font-size:1.3rem;
+	}
+	.mob {
+		display: block;
+		a.carousel-control {
+			background-image: none;
+			img {
+				position:absolute;
+				width: 30px;
+				top:50%;
+			}
+		}
+		.left {
+			img {
+				left:0;
+				transform: translateY(-50%) scale(-1, 1);
+			}
+		}
+		.right {
+			img {
+				right:0;
+				transform: translateY(-50%);
+			}
+		}
+	}
+	.col-xs-12 {
+		text-align: center;
+	}
+	.row {
+		display: none;
+	}
+	@include to768 {
+		.circle {
+			width: 13rem;
+			height: 13rem;
+		}
+		.mob {
+			display: none;
+		}
+		.row {
+			display: block;
+		}
+	}
+	@include to992 {
+		.circle {
+			width: 10rem;
+			height: 10rem;
+			margin: 0.5rem 0 0 2.1rem;
+		}
+	}
+}
+.slide-advantages {
+	background-color: #94c11f;
+	text-align: center;
+	.item {
+		margin: 3.1rem 0;
+		p {
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			font-size: 4rem;
+			text-transform: uppercase;
+			color:#fff;
+		}
+	}
+	.carousel-inner {
+		padding:0 15px;
+	}
+	a.carousel-control {
+		background-image: none;
+		img {
+			position:absolute;
+			width: 12px;
+			top:50%;
+		}
+	}
+	.left {
+		img {
+			left:0;
+			transform: translateY(-50%) scale(-1, 1);
+		}
+	}
+	.right {
+		img {
+			right:0;
+			transform: translateY(-50%);
+		}
+	}
+}
+.intan-adults {
+	.title {
+		background-color:#3cb4e7; 
+	}
+	.action {
+		.photo {
+			text-align: right;
+			img {
+				margin: 3.1rem 3.3rem 0 0;
+				width: 45rem;
+				// @include to350 {
+				// 	width: 80%;
+				// }
+			}
+			.circle-action {
+				left:0.7rem;
+				top:4.7rem;
+				background-color:#94c11f; 
+			}
+			.admonition {
+				left:0;
+			}
+		}
+		.description {
+			padding:7.4rem 0 0 4rem;
+		}
+	}
+}
+.intan-children {
+	.title {
+		background-color:#94c11f; 
+	}
+	.action {
+		.photo {
+			text-align: left;
+			img {
+				margin: 2.7rem 0 0 0;
+				width: 55rem;
+				@include to640 {
+					width: 64.8rem;
+				}
+				// @include to350 {
+				// 	width: 80%;
+				// }
+			}
+			.circle-action {
+				right:0.8rem;
+				top:4.7rem;
+				background-color:#3cb4e7; 
+			}
+			.admonition {
+				right:0;
+			}
+		}
+		.description {
+			padding:7.4rem 0 0 0;
+		}
+	}
+	.carousel {
+		.carousel-indicators {
+			left: 30%;
+			width: 100%;
+		}
+	}
+}
+.intan-older {
+	.title {
+		background-color:#3cb4e7;
+	}
+	.action {
+		.photo {
+			text-align: right;
+			img {
+				margin: 5rem 0 0 0;
+				width: 51rem;
+			}
+			.circle-action {
+				left:0.7rem;
+				top:4.7rem;
+				background-color:#94c11f; 
+			}
+			.admonition {
+				left:0;
+			}
+		}
+		.description {
+			padding:7.4rem 0 0 4rem;
+		}
+	}
+	.title-slider p {
+		padding:0;
+	}
+	.carousel {
+		.carousel-indicators {
+			left: 30%;
+			width: 100%;
+		}
+	}
+}
+.prices {
+	background-color: #f6f6f6;
+	.title {
+		background-color:#3cb4e7 ;
+		margin-bottom: 30px;
+	}
+	.list-categories {
+		margin-top:12rem;
+		li {
+			list-style-type: none;
+			margin:1rem 0;
+			a {
+				text-decoration: none;
+				font-family: 'PF Din Text Cond Pro';
+				font-weight: 500;
+				font-size: 2rem;
+				display: inline-block;
+				padding: 0.7rem 1rem;
+			}
+			a.active{
+				background-color: #d1e9f3;
+			}
+		}
+	}
+	.categories-more {
+		background-color: #f6f6f6;
+	}
+	.category {
+		margin: 4rem 0 4rem 0;
+		padding:4.9rem 3rem 5rem 0;
+		background-color: #fff;
+		.row {
+			display:block;
+		}
+		.item {
+			padding: 1rem 0 0 3rem;
+			position: relative;
+			overflow: hidden;
+			vertical-align: text-bottom;
+			display: block;
+			.col1 {
+				font-size: 1.4rem;
+				position:relative;
+				&:after {
+					content:'';
+					position: absolute;
+					width: 500px;
+					height: 1px;
+					background-color:#d1d1d1;
+					right:-518px;
+					bottom:3px;
+				}
+			}
+			.col2 {
+				background-color: #fff;
+				position:absolute;
+				bottom:0;
+				right:0;
+				font-size: 1.4rem;
+				color:#94c11f;
+				font-weight: 600;
+				padding-left: 1.4rem;
+				i {
+					font-family:'ALS Rubl';
+					font-style: normal;
+					text-transform: lowercase;
+				}
+			}
+		}
+		.all-prices {
+			text-align: center;
+			padding:39px 0 0 0;
+		}
+		@include to768 {
+			margin: 6rem 0 4rem 0;
+			.row {
+				display: table-row;
+			}
+			.item {
+				width: 50%;
+				display: table-cell;
+				.col1 {
+					&:after {
+						width: 200px;
+						height: 2px;
+						right:-218px;
+						bottom:5px;
+					}
+				}
+			}
+		}
+	}
+	form {
+		padding: 0 14px;
+		.btn-default:active, .btn-default.active, .open > .btn-default.dropdown-toggle,.btn-default.dropdown-toggle {
+			background-color: #d1e9f3;
+			color: #3cb4e7;
+			border:none;
+			outline: none;
+			&:hover,&:focus,&:active {
+				background-color: #d1e9f3;
+				color: #3cb4e7;
+				border:none;
+				outline: none;
+			}
+		}
+		.bootstrap-select .dropdown-toggle:focus {
+			outline:none!important;
+		}
+		button.btn-default {
+			position:relative;
+			background-color: #d1e9f3;
+			border:none;
+			outline: none;
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			font-size: 2rem;
+			color: #3cb4e7;
+			.arrow {
+				position: absolute;
+				top:0;
+				bottom: 0;
+				right:0;
+				width: 50px;
+				background-color: red;
+				background-color: #95d4ee;
+				padding:4px;
+				img{
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+	@include to768 {
+		.title {
+			margin: 0;
+		}
+	}
+}
+.contacts {
+	.title {
+		background-color: #94c11f;
+	}
+	#map_canvas {
+		width: 100%;
+		height: 500px;
+	}
+}
+.more {
+	text-align: center;
+	.moreServices {
+		p {
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			font-size: 3rem;
+			color:#94c11f;
+			text-transform: uppercase;
+			margin:9rem 0 0 0;
+		}
+		a {
+			padding:1rem 4.9rem;
+			margin:3.8rem 0 8rem 0;
+		}
+	}
+}
+footer {
+	background-color: #f6f6f6;
+	color:#333333;
+	.social-networks {
+		padding:20px 0;
+		list-style-type: none;
+		li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 3px;
+			a {
+				width: 29px;
+				height: 29px;
+				display: block;
+			}
+			.vk {
+				background: url(../images/sprite.png) 0 0 no-repeat;
+				&:hover {
+					background: url(../images/sprite.png) 0 -33px no-repeat;
+				}
+			}
+			.facebook {
+				background: url(../images/sprite.png) -36px 0 no-repeat;
+				&:hover {
+					background: url(../images/sprite.png) -36px -33px no-repeat;
+				}
+			}
+			.odnoklassniki {
+				background: url(../images/sprite.png) -74px 0 no-repeat;
+				&:hover {
+					background: url(../images/sprite.png) -74px -33px no-repeat;
+				}
+			}
+		}
+	}
+	.left {
+		p {
+			&:nth-child(2) , &:nth-child(3){
+				font-size: 1rem;
+				text-transform: uppercase;
+			}
+			&:nth-child(3){
+				font-size: 1.1rem;
+			}
+			&:nth-child(4){
+				font-size: 1.3rem;
+			}
+		}
+	}
+	.right{
+		text-align:left;
+		padding-bottom: 10px;
+		.logo-footer {
+			width: 93px;
+			display: inline-block;
+			vertical-align: top;
+			padding:20px 0;
+			img {
+				width: 100%;
+			}
+		}
+		p {
+			&:nth-child(2) {
+				font-size: 1rem;
+				padding: 10px 0 21px 0;
+			}
+			&:nth-child(3) {
+				font-size: 0.9rem;
+				line-height:2rem;
+				display: inline-block;
+				vertical-align: top;
+				padding-right:20px;
+			}
+		}
+		.legion {
+			width: 93px;
+			// float: right;
+			display: inline-block;
+			vertical-align: top;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	@include to768 {
+		.right{
+			text-align:right;
+		}
+
+	}
+}
+.title {
+	text-transform: uppercase;
+	font-family: 'PF Din Text Cond Pro';
+	font-weight: 500;
+	text-align: center;
+		h1{
+			display: inline-block;
+			color:#fff;
+			font-size:4.4rem;
+			margin-bottom: 2.5rem;
+		}
+}
+.intan-adults,.intan-children,.intan-older {
+	.action {
+		.photo {
+			text-align: center;
+		}
+	}
+}
+.action {
+	i {
+		font-family:'ALS Rubl';
+		font-style: normal;
+		text-transform: lowercase;
+	}
+	text-transform: uppercase;
+	.photo {
+		padding: 5rem 0 0 0;
+		position:relative;
+		color:#fff;
+		img {
+			// width: 100%!important;
+		}
+		.admonition {
+			position:absolute;
+			text-transform: none;
+			color:#cecece;
+			font-size:1.25rem;
+			top:1.6rem;
+		}
+		.circle-action {
+			position:absolute;
+			border-radius:50%;
+			display: inline-block;
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			font-size: 3rem;
+			width: 14rem;
+			height: 14rem;
+			span{
+				position:absolute;
+				z-index:1000;
+				top:50%;
+				left:50%;
+				transform: translate(-50%, -50%);
+				font-family: 'PF Din Text Cond Pro';
+				font-weight: 500;
+				font-size: 3rem;
+			}
+		}
+	}
+	.description {
+		text-align: center;
+		.serviceName{
+			font-size: 3.5rem;
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 300;
+		}
+		.price {
+			font-size:8.5rem;
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 500;
+			color:#94c11f;
+		}
+		.discount {
+			display: inline-block;
+			position:relative;
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: normal;
+			font-size:2rem;
+			padding:0 0 0 3rem;
+			margin: 0 0 0 0.6rem;
+			i {
+				font-weight: 400;
+			}
+			&:after {
+				content:"";
+				position:absolute;
+				top:0;
+				bottom: 0;
+				width:3px;
+				left: 0;
+				background-color: #94c11f;
+			}
+			p {
+				margin: 0;
+				color:#929292;
+			}
+			span {
+				color:#94c11f;
+			}
+		}
+		a {
+			margin: 4.6rem 0 0 1rem;
+			padding: 1.1rem 2.7rem;
+		}
+		@include to768 {
+			text-align: left;
+		}
+	}
+	@include to640 {
+		.photo {
+			img {
+
+			}
+		}
+	}
+}
+.title-slider{
+	p {
+		padding:5.2rem 0 0 0;
+		font-family: 'PF Din Text Cond Pro';
+		font-weight: 500;
+		font-size: 4.4rem;
+		text-transform: uppercase;
+	}
+}
+.forSlider .carousel-inner{
+		padding:0 10px;
+}
+.forSlider .carousel {
+		margin: 0 0 20rem 0;
+		height: 30rem;
+		img {
+			padding: 1.5rem 0.4rem 0 2rem;
+			width: 23rem;
+		}
+		.title-service {
+			text-transform: uppercase;
+			font-family: 'PF Din Text Cond Pro';
+			font-weight: 300;
+			margin-top: 1.3rem;
+			font-size:3rem;
+		}
+		.text-service {
+			font-weight: lighter;
+			line-height: 2.7rem;
+			font-size:1.6rem;
+			width:85%;
+		}
+		@include to768 {
+			height: 20rem;
+		}
+}
+.forSlider .carousel .carousel-indicators li {
+	display: none;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	line-height: 3.6rem;
+	text-indent: 0;
+	margin:0 5.4rem;
+	position: relative;
+	bottom: -14.2rem;
+	font-family: 'PF Din Text Cond Pro';
+	font-weight: 300;
+	font-size: 3rem;
+	border-color:#94c11f;
+	border-width: 2px;
+	&.active{
+		background-color:#3cb4e7 ;
+		border-color:#3cb4e7;
+	}
+	p.inscription {
+		position: absolute;
+		top:5rem;
+		left:50%;
+		font-size: 1.3rem;
+		line-height:1.6rem;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: lighter;
+		width: 418%;
+		transform: translateX(-50%);
+	}
+	&:first-child {
+		margin-left: 0;
+	}
+	&:last-child{
+		margin-right: 0;
+	}
+	&:last-child:after {
+		display:none;
+	}
+	&:after {
+		content:"";
+		position: absolute;
+		top:50%;
+		background-color:#94c11f;
+		transform: translateY(-50%);
+		right: -10.4rem;
+		width: 9.1rem;
+		height: 1px;
+	}
+	@include to768 {
+		display: inline-block;
+	}
+}
+.forSlider {
+	position: relative;
+	text-align: center;
+	@include to768 {
+		text-align: left;
+	}
+}
+.forSlider .carousel-control.left ,.forSlider .carousel-control.right{
+	background-image: none;
+	transform: translateY(-50%);
+	position: absolute;
+	top:50%;
+	img {
+		width: 7.2rem;
+	}
+}
+.forSlider .carousel-control.left {
+	img {
+		transform: scale(-1, 1);
+	}
+}
+.forSlider .carousel .text-service {
+	display: inline-block;
+	@include to768 {
+	display: block;
+	}
+}
+
